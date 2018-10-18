@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/users/send_notification/{id}', 'PNController@sendNotification');
+
+Route::get('/', 'PNController@inicio');
+
+?>
