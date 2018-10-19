@@ -23,7 +23,7 @@ class PNController extends Controller
         $message = "Esto es una prueba de nivel para Ecommerce Farm.";
 
         $provider = new SmtpProvider();
-        $this->service = new NotificationService($provider, null);
+        $this->service = new NotificationService($provider);
 
         // Se envia el email usando el método 'notify', almacenando a continuación el resultado.
         $result = $this->service->notify($user, $message);

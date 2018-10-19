@@ -49,7 +49,7 @@ class SendNotificationCommand extends Command
         $message = "Esto es una prueba de nivel para Ecommerce Farm.";
 
         $provider = new SesProvider();
-        $service = new NotificationService(null, $provider);
+        $service = new NotificationService($provider);
 
         // Se envia el email usando el método 'notify', almacenando a continuación el resultado.
         $result = $service->notify($user, $message);
